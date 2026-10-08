@@ -1627,7 +1627,9 @@ h3 {
     }
 
     .contact h2 {
-        font-size: 75px;
+        font-size: clamp(52px, 15vw, 70px);
+        line-height: 0.85;
+        letter-spacing: -4px;
     }
 
 

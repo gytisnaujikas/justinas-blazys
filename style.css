@@ -430,20 +430,16 @@ h3 {
     pointer-events: none;
 
     background:
-        linear-gradient(
-            to right,
+        linear-gradient(to right,
             #0a0a0a 0%,
             transparent 10%,
             transparent 90%,
-            #0a0a0a 100%
-        ),
-        linear-gradient(
-            to bottom,
+            #0a0a0a 100%),
+        linear-gradient(to bottom,
             #0a0a0a 0%,
             transparent 12%,
             transparent 88%,
-            #0a0a0a 100%
-        );
+            #0a0a0a 100%);
 
     z-index: 1;
 }
@@ -458,9 +454,7 @@ h3 {
     display: block;
 
     filter:
-        contrast(1.05)
-        saturate(0.85)
-        brightness(0.92);
+        contrast(1.05) saturate(0.85) brightness(0.92);
 
     transition: transform 0.8s ease;
 }
@@ -1432,7 +1426,6 @@ h3 {
         min-height: 650px;
 
         position: relative;
-
         overflow: hidden;
     }
 
@@ -1441,8 +1434,32 @@ h3 {
         height: 100%;
 
         object-fit: cover;
+        object-position: center;
 
         display: block;
+    }
+
+    .about-image::after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        pointer-events: none;
+
+        background:
+            linear-gradient(to right,
+                #0a0a0a 0%,
+                transparent 8%,
+                transparent 92%,
+                #0a0a0a 100%),
+            linear-gradient(to bottom,
+                #0a0a0a 0%,
+                transparent 5%,
+                transparent 95%,
+                #0a0a0a 100%);
+
+        z-index: 1;
     }
 
 

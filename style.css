@@ -848,15 +848,48 @@ h3 {
 }
 
 .social-arrow {
+    position: relative;
+
     display: inline-block;
 
-    margin-left: 4px;
+    width: 14px;
+    height: 14px;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1;
+    margin-left: 6px;
 
     transition: transform 0.3s ease;
+}
+
+.social-arrow::before {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+
+    top: 2px;
+    right: 0;
+}
+
+.social-arrow::after {
+    content: "";
+
+    position: absolute;
+
+    width: 11px;
+    height: 1px;
+
+    background-color: currentColor;
+
+    top: 6px;
+    left: 1px;
+
+    transform: rotate(-45deg);
+    transform-origin: right center;
 }
 
 .social-link:hover .social-arrow {
